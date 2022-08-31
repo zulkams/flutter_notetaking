@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notetaking/constant.dart';
+import 'package:flutter_notetaking/widget/appButton_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -16,7 +17,7 @@ class LandingScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Spacer(),
+              const Spacer(),
               RichText(
                 text: TextSpan(
                   text: 'Welcome to ',
@@ -39,7 +40,7 @@ class LandingScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 10,
               ),
               Text(
@@ -52,12 +53,12 @@ class LandingScreen extends StatelessWidget {
                       fontWeight: FontWeight.w500),
                 ),
               ),
-              Spacer(),
+              const Spacer(),
               SvgPicture.asset(
                 'assets/images/noteTaking.svg',
                 height: MediaQuery.of(context).size.height * 0.20,
               ),
-              Spacer(),
+              const Spacer(),
               TextFormField(
                 decoration: InputDecoration(
                   enabledBorder: UnderlineInputBorder(
@@ -74,7 +75,7 @@ class LandingScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               TextFormField(
                 obscureText: true,
                 obscuringCharacter: '•',
@@ -95,23 +96,12 @@ class LandingScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    primary: mainColor,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 10),
-                    minimumSize: const Size.fromHeight(10)),
-                child: Text(
-                  'Sign In',
-                  style: GoogleFonts.asap(
-                    textStyle: const TextStyle(
-                        fontSize: 18, fontWeight: FontWeight.w500),
-                  ),
-                ),
-              ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
+              AppButton(
+                  backgroundColor: mainColor,
+                  textColor: Colors.white,
+                  text: 'Sign In'),
+              const SizedBox(height: 20),
               Row(children: <Widget>[
                 const Expanded(
                     child: Divider(
@@ -133,25 +123,12 @@ class LandingScreen extends StatelessWidget {
                   thickness: 2,
                 )),
               ]),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 50, vertical: 10),
-                    minimumSize: const Size.fromHeight(10)),
-                child: Text(
-                  'Sign Up',
-                  style: GoogleFonts.asap(
-                    textStyle: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        color: mainColor),
-                  ),
-                ),
-              ),
-              Spacer(),
+              const SizedBox(height: 20),
+              AppButton(
+                  backgroundColor: Colors.white,
+                  textColor: mainColor,
+                  text: 'Sign Up'),
+              const Spacer(),
             ],
           ),
         ),
