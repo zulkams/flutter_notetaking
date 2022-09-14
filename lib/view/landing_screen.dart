@@ -25,6 +25,7 @@ class LandingScreen extends StatelessWidget {
                     textStyle: TextStyle(
                         fontSize: 24,
                         color: mainColor,
+                        letterSpacing: .5,
                         fontWeight: FontWeight.w500),
                   ),
                   children: <TextSpan>[
@@ -34,6 +35,7 @@ class LandingScreen extends StatelessWidget {
                         textStyle: TextStyle(
                             fontSize: 26,
                             color: mainColor,
+                            letterSpacing: .5,
                             fontWeight: FontWeight.w700),
                       ),
                     ),
